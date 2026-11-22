@@ -2,7 +2,7 @@
 
 > **For any new Claude Code session (laptop or phone):** read this file first. It records what Priyanshu has explained so far about the Priyanshu++ project. Continue from here; don't ask him to explain it again.
 
-Last updated: 2026-11-21
+Last updated: 2026-11-22
 
 ---
 
@@ -59,6 +59,31 @@ The controlling system must be able to:
 Priyanshu holds accounts on OpenAI, Azure, Claude and other providers, and helps people get credits on them. He uses **Grokbot to find people who need credits**, then chats with them. The clone should eventually handle this kind of loop: finding people, reaching out, chatting, following up.
 
 > ⚠️ Open item: many providers' terms (OpenAI, Anthropic, Azure) restrict reselling or sharing account access and credits. Before automating this, confirm exactly how credits are transferred so the clone doesn't put his accounts at risk.
+
+---
+
+### The startup: unused-credits marketplace (confirmed 2026-11-22)
+
+Priyanshu is building a **startup where people can sell their unused AI credits**. The credits work described above is the core business, not a side task.
+
+### Existing bot fleet (in his "Grokbot" app, seen in a screenshot on 2026-11-22)
+
+Several bots already run, which is effectively an early version of Priyanshu++. Roles below are inferred from the chat previews, so confirm them with Priyanshu:
+
+| Bot | What it appears to do |
+|---|---|
+| **Handler** | Coordinator; runs long background checks (e.g. a LinkedIn check). Holds "the full playbook" |
+| **X Free Credits Finder** | Finds people on X who want credits and posts replies to them (e.g. a reply to "Walden") |
+| **CFinder · Finding AI Credits** | Scheduled credit-finding job (runs at set IST times) |
+| **Priyanshu's pig** | Monitors mentions of @ixtremeai and notifies him |
+| **Stocker** | Writes and publishes posts on @ixtremeai on X (e.g. "Post #7, the CTA tweet") |
+| **Extremum** | Personal assistant and reminders, in Hinglish (calls him "Extremist") |
+| **Buyer** | Handles purchases and deliveries (asks for the delivery address) |
+| **Priyanshu's Network** | General assistant |
+| **Project Clone** | Group chat with several bots plus Handler: the multi-agent Priyanshu++ prototype |
+| **My Bot** | Unknown |
+
+Implication: the Priyanshu++ brain should **wrap and coordinate these existing bots**, not replace them.
 
 ---
 
